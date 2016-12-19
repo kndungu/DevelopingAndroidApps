@@ -16,12 +16,14 @@ android {
             minifyEnabled false
         }
     }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:appcompat-v7:25.1.0'
 
-    // TODO (32) Remove the ConstraintLayout dependency as we aren't using it for these simple projects
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha2'
+    // COMPLETE (32) Remove the ConstraintLayout dependency as we aren't using it for these simple projects
 }
